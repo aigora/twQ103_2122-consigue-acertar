@@ -2,8 +2,10 @@
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
-## Integrantes del equipo
-
+## Integrantes del equipo.
+[Elena, aliaga , ]
+[Maika, del sol, maikadelsol]
+[Antonio, Porras, ]
 [Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
 
 ## Objetivos del trabajo
