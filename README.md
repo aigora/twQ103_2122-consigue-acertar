@@ -1,4 +1,4 @@
-# [Título del trabajo]
+# consigue acertar
 
 Se trata de un juego en el que los participantes deben de acertar una serie de preguntas para lograr la victoria. El juego va a permitir hacer uso de un número reducido de pistas para poder llegar a su fin.
 
