@@ -16,7 +16,8 @@ int main (){
     char respUno[10] = "carbono";
     char respDos[10] = "rocinante";
     char respTres[10] = "venecia";
-    char preguntauno, preguntados, preguntatres;
+    char solucion[10] = "sol";
+    char preguntauno, preguntados, preguntatres,respuesta;
     
 fichero=fopen("usuarios.txt","r");
 if(fichero==NULL){ //comprobamos que el fichero funciona
@@ -153,7 +154,23 @@ switch(inicio){
            
             printf("Tivial superado !!\nHas obtenido la letra Z\n");
             
+            printf("----ADIVINANZA----");
+            do
+            {
+                printf("¿Qué entra en el río y no se moja?\n");
+                scanf("%s",&respuesta);
+                cont=0;
+                if(strcmp(solucion,&respuesta) != 0){
+                    cont=1;
+                }else{
+                    cont=0;
+                }
+            }
+            while(cont==1);
+           
+            printf("Adivinanza superada!!\nHas obtenido la letra P.\n");
         }
+        
         else if (opcion == 'b'){
             printf ("ver el historial\n");
         }
@@ -165,3 +182,4 @@ switch(inicio){
         }
     
 }
+
