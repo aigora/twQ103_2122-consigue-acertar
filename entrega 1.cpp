@@ -1,17 +1,22 @@
+
 #include <stdio.h>
 #include <string.h>
 
 struct lista{
     char nombre[100];
     char contrasennya[100];
-    int registro;    
+    int registro;
 };
 
 int main (){
     struct lista usuarios[500];
-    int inicio,numeroUsuarios=0,opcion;
+    int inicio,numeroUsuarios=0,opcion, cont;
     int numeracion=0, i=0, j=0, a, b, n=0;
     FILE * fichero;
+    char respUno[10] = "carbono";
+    char respDos[10] = "rocinante";
+    char respTres[10] = "venecia";
+    char preguntauno, preguntados, preguntatres;
     
 fichero=fopen("usuarios.txt","r");
 if(fichero==NULL){ //comprobamos que el fichero funciona
@@ -103,7 +108,51 @@ switch(inicio){
         scanf ("%d", &opcion);
         
         if (opcion == 'a'){
-            printf ("el juego\n");
+            printf ("EMPEZAMOS\n");
+            printf("----TRIVIAL----");
+            
+            //hacemos un bucle do-while para que nos haga la pregunta en caso de no introducir la respuesta correcta. Una vez introducida la correcta pasamos a la siguiente pregunta
+            do
+            {
+            printf("¿Que elemento esta presente en todas las moleculas organicas?\n");
+                scanf("%s",&preguntauno);
+                cont=0;
+                if(strcmp(respUno,&preguntauno) != 0){
+                    cont=1;
+                }else{
+                    cont=0;
+                }
+            }
+            while(cont==1);
+
+            do
+            {
+            printf("¿Como se llama el caballo de Don Quijote de la Mancha?\n");
+                scanf("%s",&preguntados);
+                cont=0;
+                if(strcmp(respDos,&preguntados) != 0){
+                    cont=1;
+                }else{
+                    cont=0;
+                }
+            }
+            while(cont==1);
+            
+            do
+            {
+                printf("¿Cual era la ciudad hogar de Marco Polo?\n");
+                scanf("%s",&preguntatres);
+                cont=0;
+                if(strcmp(respTres,&preguntatres) != 0){
+                    cont=1;
+                }else{
+                    cont=0;
+                }
+            }
+            while(cont==1);
+           
+            printf("Tivial superado !!\nHas obtenido la letra Z\n");
+            
         }
         else if (opcion == 'b'){
             printf ("ver el historial\n");
