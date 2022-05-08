@@ -17,7 +17,9 @@ int main (){
     char respDos[10] = "rocinante";
     char respTres[10] = "venecia";
     char solucion[10] = "sol";
-    char preguntauno, preguntados, preguntatres,respuesta;
+    char solucion2[30] = "a hierro muere";
+    char solucion3[30] = "otorga";
+    char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2;
     
 fichero=fopen("usuarios.txt","r");
 if(fichero==NULL){ //comprobamos que el fichero funciona
@@ -170,6 +172,33 @@ switch(inicio){
            
             printf("Adivinanza superada!!\nHas obtenido la letra P.\n");
         }
+    
+    
+            printf (" ---------------------------");
+            printf ("     ¡ADIVINA EL REFRAN!    ");
+            printf (" ---------------------------");
+            do {
+                printf ("El que a hierro mata...\n");
+                scanf("%s",&frase1);
+                cont=0;
+                if (strcmp (solucion2,&frase1) = 1) {
+                    cont=1;
+                } else {
+                    cont=0;
+                }
+            } while (cont==1);
+    
+    
+            do {
+                printf ("El que calla ....\n");
+                scanf("%s",&frase2);
+                cont=0;
+                if (strcmp (solucion3,&frase2) = 1) {
+                    cont=1;
+                } else {
+                    cont=0;
+                }
+            } while (cont==1);
         
         else if (opcion == 'b'){
             printf ("ver el historial\n");
