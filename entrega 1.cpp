@@ -248,7 +248,6 @@ switch(inicio){
             do {
                 printf(" El codigo es...\n");
                 scanf("%d",respuesta5);
-                do {
                 if (respuesta5 = 696) {
                     cont=1;
                 } else {
@@ -269,7 +268,7 @@ switch(inicio){
                
             
         
-        }else if (opcion == 'b'){
+        } else if (opcion == 'b'){
             printf ("ver el historial\n");
         }
         else if (opcion == 'c'){
