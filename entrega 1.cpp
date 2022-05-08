@@ -13,11 +13,10 @@ int main (){
     int inicio,numeroUsuarios=0,opcion, cont;
     int numeracion=0, i=0, j=0, a, b, n=0;
     FILE * fichero;
-    int solucion4 = 6;
-    int solucion5 = 9;
-    int solucion6 = 6;
-    int solucion7 = 696;
-    int respuesta2, respuesta3, respuesta4, respuesta5;
+    int respuesta2 = 0;
+    int respuesta3 = 0;
+    int respuesta4 = 0;
+    int respuesta5 = 0;
     char respUno[10] = "carbono";
     char respDos[10] = "rocinante";
     char respTres[10] = "venecia";
@@ -177,7 +176,6 @@ switch(inicio){
             while(cont==1);
            
             printf("Adivinanza superada!!\nHas obtenido la letra P.\n");
-        }
     
     
             printf (" ---------------------------");
@@ -218,7 +216,7 @@ switch(inicio){
                 printf(" Primer numero\n");
                 printf(" Es la posición del Berilio en la tabla periódica");
                 scanf("%d", &respuesta2);
-                if (strcmp (solucion4,&respuesta2) != 0) {
+                if (respuesta2 = 6) {
                     cont=1;
                 } else {
                     cont=0;
@@ -229,7 +227,7 @@ switch(inicio){
                 printf(" Siguiente numero\n");
                 printf(" Es la solucion de esta operacion: 54/6");
                 scanf("%d", &respuesta3);
-                if (strcmp (solucion5,&respuesta3) != 0) {
+                if (respuesta3 = 9) {
                     cont=1;
                 } else {
                     cont=0;
@@ -240,7 +238,7 @@ switch(inicio){
                 printf(" Ultimo numero\n");
                 printf(" Es el numero de carbonos que tiene el benceno");
                 scanf("%d", &respuesta4);
-                if (strcmp (solucion6,&respuesta4) != 0) {
+                if (respuesta4 = 6) {
                     cont=1;
                 } else {
                     cont=0;
@@ -251,7 +249,7 @@ switch(inicio){
                 printf(" El codigo es...\n");
                 scanf("%d",respuesta5);
                 do {
-                if (strcmp (solucion7,&respuesta5) != 0) {
+                if (respuesta5 = 696) {
                     cont=1;
                 } else {
                     cont=0;
@@ -271,7 +269,7 @@ switch(inicio){
                
             
         
-        else if (opcion == 'b'){
+        }else if (opcion == 'b'){
             printf ("ver el historial\n");
         }
         else if (opcion == 'c'){
