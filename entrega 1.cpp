@@ -185,7 +185,7 @@ switch(inicio){
                 printf ("El que a hierro mata...\n");
                 scanf("%s",&frase1);
                 cont=0;
-                if (strcmp (solucion2,&frase1) = 1) {
+                if (strcmp (solucion2,&frase1) != 0) {
                     cont=1;
                 } else {
                     cont=0;
@@ -198,7 +198,7 @@ switch(inicio){
                 printf ("El que calla ....\n");
                 scanf("%s",&frase2);
                 cont=0;
-                if (strcmp (solucion3,&frase2) = 1) {
+                if (strcmp (solucion3,&frase2) != 0) {
                     cont=1;
                 } else {
                     cont=0;
@@ -258,9 +258,56 @@ switch(inicio){
             printf (" ENHORABUENA HAS ACERTADO EL CODIGO!!\n has obtenido la letra L");
             
                 
-            printf(" --------------------");
-            printf("   ¡SOPA DE LETRAS!  ");
-            printf(" --------------------");
+            printf(" --------------------  ");
+            printf("   ¡SOPA DE LETRAS!    ");
+            printf(" --------------------\n");
+            
+            do {
+                printf(" F  T  D  R  A  O  E  ");
+                printf(" H  S  I  A  S  M  L  ");
+                printf(" O  G  I  D  O  C  E  ");
+                printf(" D  T  E  R  D  P  S  ");
+                printf(" E  A  R  I  I  O  R  ");
+                printf(" T  U  P  V  O  D  F  ");
+                printf(" D  A  T  I  L  F  C  ");
+                
+                printf(" ----PISTAS----\n");
+                printf("La primera palabra es relativo a la informatica\n");
+                scanf("%s", &respuesta6);
+                cont=0;
+                if (strcmp (solucion4,&respuesta6) != 0 ) {
+                    cont=1;
+                } else {
+                    cont=0;
+                    }
+                } while (cont==1);
+                
+                printf("Siguinete pista\n La siguiente palabra es un elemento de la tabla periodica\n");
+                scanf("%s",&respuesta7);
+                cont=0;
+                if (strcmp (solucion5,&respuesta7) !=0 ) {
+                    cont=1;
+                } else {
+                    cont=0;
+                    }
+                } while (cont==1);
+    
+                printf("Ultima pista\n La ultima palabra es una fruta\n");
+                scanf("%s",&respuesta8);
+                cont=0;
+                if (strcmp (solucion4,&respuesta6) = 1) {
+                    cont=1;
+                } else {
+                    cont=0;
+                    }
+                } while (cont==1);
+
+                printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
+                
+            
+            
+            
+            
                 
             
                 
