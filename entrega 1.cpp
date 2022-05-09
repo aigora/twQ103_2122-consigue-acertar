@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -24,7 +23,7 @@ int main (){
     char solucion2[30] = "a hierro muere";
     char solucion3[30] = "otorga";
     char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2;
-    
+    int pregUno, pregDos, pregTres, pregCuatro;
     
 fichero=fopen("usuarios.txt","r");
 if(fichero==NULL){ //comprobamos que el fichero funciona
@@ -295,7 +294,7 @@ switch(inicio){
                 printf("Ultima pista\n La ultima palabra es una fruta\n");
                 scanf("%s",&respuesta8);
                 cont=0;
-                if (strcmp (solucion4,&respuesta6) = 1) {
+                if (strcmp (solucion6,&respuesta6) = 1) {
                     cont=1;
                 } else {
                     cont=0;
@@ -304,15 +303,33 @@ switch(inicio){
 
                 printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
                 
-            
-            
-            
-            
-                
-            
-                
-                
-               
+                printf("---QUIEN QUIERE SER MILLONARIO---");
+                printf("A continuacion se mostraran una serie de preguntas. Se debe escoger la opcion que se crea correcta. Solo hay una opcion correcta para cada pregunta.");
+
+                do{
+                printf("Pregunta1:\nDada la siguiente ecuacion, escoja la solucion correcta:\nf(x)=x^3+x^2+x^1+x^0, siendo x=2.\n1)13\n2)14\n3)15\n4)16\n");
+                scanf("%d",&pregUno);
+                }while(pregUno!=3);
+                printf("Respuesta correcta!");
+
+                do{
+                printf("Pregunta2:\n¿Que estrella de Hollywood pantento, en la Segunda Guerra Mundial, un sistema para que no se detectaran los torpedos?\n1)Lauren Bacall\n2)Hedy Lamarr\n3)Joan Blondell\n4)Bette Davis\n");
+                scanf("%d",&pregDos);
+                }while(pregDos!=2);
+                printf("Respuesta correcta!");
+
+                do{
+                printf("Pregunta3:\nUna tarjeta SD es un dispositivo de:\n1)Compresion de video\n2)Memoria\n3)Procesamiento de audio\n4)Comunicacion remota\n");
+                scanf("%d",&pregTres);
+                }while(pregTres!=2);
+                printf("Respuesta correcta!");
+
+                do{
+                printf("Pregunta4:\n¿Cuantos astronautas han tenido el privilegio de andar sobre la luna?\n1)6\n2)3\n3)12\n4)20\n");
+                scanf("%d",&pregCuatro);
+                }while(pregCuatro!=3);
+                printf("Respuesta correcta!\n");
+                printf("Prueba superada !!\nHas obtenido la letra I\n");
             
         
         } else if (opcion == 'b'){
