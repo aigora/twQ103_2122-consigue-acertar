@@ -116,7 +116,9 @@ switch(inicio){
         
         if (opcion == 'a'){
             printf ("EMPEZAMOS\n");
-            printf("----TRIVIAL----");
+            printf(" --------------------  ");
+            printf("       ¡TRIVIAL!       ");
+            printf(" --------------------\n");
             
             //hacemos un bucle do-while para que nos haga la pregunta en caso de no introducir la respuesta correcta. Una vez introducida la correcta pasamos a la siguiente pregunta
             do
@@ -160,7 +162,9 @@ switch(inicio){
            
             printf("Tivial superado !!\nHas obtenido la letra Z\n");
             
-            printf("----ADIVINANZA----");
+             printf(" --------------------  ");
+             printf("      ¡ADIVINANZA!      ");
+             printf(" --------------------\n");
             do
             {
                 printf("¿Qué entra en el río y no se moja?\n");
@@ -303,7 +307,9 @@ switch(inicio){
 
                 printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
                 
-                printf("---QUIEN QUIERE SER MILLONARIO---");
+                 printf(" --------------------  ");
+                 printf("     ¿CUANTO SABES?    ");
+                 printf(" --------------------\n");
                 printf("A continuacion se mostraran una serie de preguntas. Se debe escoger la opcion que se crea correcta. Solo hay una opcion correcta para cada pregunta.");
 
                 do{
