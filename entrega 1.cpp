@@ -22,7 +22,10 @@ int main (){
     char solucion[10] = "sol";
     char solucion2[30] = "a hierro muere";
     char solucion3[30] = "otorga";
-    char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2;
+    char solucion4[30] = "codigo";
+    char solucion5[30] = "sodio";
+    char solucion6[30] = "datil";
+    char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2, respuesta6, respuesta7, respuesta8;
     int pregUno, pregDos, pregTres, pregCuatro;
     
 fichero=fopen("usuarios.txt","r");
@@ -285,7 +288,7 @@ switch(inicio){
                     }
                 } while (cont==1);
                 
-                printf("Siguinete pista\n La siguiente palabra es un elemento de la tabla periodica\n");
+                printf("Siguinete pista:\n La siguiente palabra es un elemento de la tabla periodica\n");
                 scanf("%s",&respuesta7);
                 cont=0;
                 if (strcmp (solucion5,&respuesta7) !=0 ) {
@@ -295,10 +298,10 @@ switch(inicio){
                     }
                 } while (cont==1);
     
-                printf("Ultima pista\n La ultima palabra es una fruta\n");
+                printf("Ultima pista\n La ultima palabra es una fruta exotica\n");
                 scanf("%s",&respuesta8);
                 cont=0;
-                if (strcmp (solucion6,&respuesta6) = 1) {
+                if (strcmp (solucion6,&respuesta8) = 1) {
                     cont=1;
                 } else {
                     cont=0;
