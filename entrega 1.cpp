@@ -7,24 +7,14 @@ struct lista{
     int registro;
 };
 
+void historia(void);
+
 int main (){
-    struct lista usuarios[500];
-    int inicio,numeroUsuarios=0,opcion, cont;
-    int numeracion=0, i=0, j=0, a, b, n=0;
     FILE * fichero;
-    int respuesta2 = 0;
-    int respuesta3 = 0;
-    int respuesta4 = 0;
-    int respuesta5 = 0;
-    char respUno[10] = "carbono";
-    char respDos[10] = "rocinante";
-    char respTres[10] = "venecia";
-    char solucion[10] = "sol";
-    char solucion2[30] = "a hierro muere";
-    char solucion3[30] = "otorga";
-    char solucion4[30] = "codigo";
-    char solucion5[30] = "sodio";
-    char solucion6[30] = "datil";
+    struct lista usuarios[500];
+    int inicio,numeroUsuarios=0,opcion, cont, numeracion=0, i=0, j=0, a, b, n=0;
+    int respuesta2 = 0,respuesta3 = 0,respuesta4 = 0,respuesta5 = 0;
+    char respUno[10] = "carbono",respDos[10] = "rocinante",respTres[10] = "venecia",solucion[10] = "sol",solucion2[30] = "a hierro muere",solucion3[30] = "otorga",solucion4[30] = "codigo",solucion5[30] = "sodio",solucion6[30] = "datil";
     char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2, respuesta6, respuesta7, respuesta8;
     int pregUno, pregDos, pregTres, pregCuatro;
     
@@ -118,8 +108,10 @@ switch(inicio){
         scanf ("%d", &opcion);
         
         if (opcion == 'a') {
-        	
-        	printf ("EMPEZAMOS\n");
+            
+            historia();
+            
+            printf ("EMPEZAMOS\n");
             printf(" --------------------  ");
             printf("       ¡TRIVIAL!       ");
             printf(" --------------------\n");
@@ -223,7 +215,7 @@ switch(inicio){
                 printf(" Primer numero\n");
                 printf(" Es la posición del Berilio en la tabla periódica");
                 scanf("%d", &respuesta2);
-                if (respuesta2 = 6) {
+                if (respuesta2 == 6) {
                     cont=1;
                 } else {
                     cont=0;
@@ -234,7 +226,7 @@ switch(inicio){
                 printf(" Siguiente numero\n");
                 printf(" Es la solucion de esta operacion: 54/6");
                 scanf("%d", &respuesta3);
-                if (respuesta3 = 9) {
+                if (respuesta3 == 9) {
                     cont=1;
                 } else {
                     cont=0;
@@ -245,7 +237,7 @@ switch(inicio){
                 printf(" Ultimo numero\n");
                 printf(" Es el numero de carbonos que tiene el benceno");
                 scanf("%d", &respuesta4);
-                if (respuesta4 = 6) {
+                if (respuesta4 == 6) {
                     cont=1;
                 } else {
                     cont=0;
@@ -254,8 +246,8 @@ switch(inicio){
     
             do {
                 printf(" El codigo es...\n");
-                scanf("%d",respuesta5);
-                if (respuesta5 = 696) {
+                scanf("%d",&respuesta5);
+                if (respuesta5 == 696) {
                     cont=1;
                 } else {
                     cont=0;
@@ -281,15 +273,15 @@ switch(inicio){
             printf(" ----PISTAS----\n");
             
             do {
-				printf("La primera palabra es relativo a la informatica\n");
+                printf("La primera palabra es relativo a la informatica\n");
                 scanf("%s", &respuesta6);
                 cont=0;
                 if (strcmp (solucion4,&respuesta6) != 0 ) {
                     cont=1;
                 } else {
                     cont=0;
-                    } 
-				} while (cont==1);
+                    }
+                } while (cont==1);
                 
             do {
                 printf("Siguinete pista:\n La siguiente palabra es un elemento de la tabla periodica\n");
@@ -299,19 +291,19 @@ switch(inicio){
                     cont=1;
                 } else {
                     cont=0;
-                    } 
-				} while (cont==1);
+                    }
+                } while (cont==1);
     
             do {
-				printf("Ultima pista\n La ultima palabra es una fruta exotica\n");
+                printf("Ultima pista\n La ultima palabra es una fruta exotica\n");
                 scanf("%s",&respuesta8);
                 cont=0;
                 if (strcmp (solucion6,&respuesta8) != 0) {
                     cont=1;
                 } else {
                     cont=0;
-                    } 
-				} while (cont==1);
+                    }
+                } while (cont==1);
 
             printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
             
@@ -346,7 +338,7 @@ switch(inicio){
             printf("Prueba superada !!\nHas obtenido la letra I\n");
                 
                 
-		}  else if (opcion == 'b'){
+        }  else if (opcion == 'b'){
             printf ("ver el historial\n");
         }
         else if (opcion == 'c'){
@@ -357,3 +349,13 @@ switch(inicio){
         }
         
     }
+
+
+
+void historia(){
+    
+    printf("Era un dia soleado. Las oficinas abrían pronto y Daniel, el conserje, se disponía a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraño olor y observa una luz encendida que creía recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");
+    
+    
+}
+
