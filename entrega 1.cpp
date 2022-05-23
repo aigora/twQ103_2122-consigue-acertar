@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <string.h>
 #define N 1
 
@@ -366,18 +366,7 @@ switch(inicio){
             }while(pregCuatro!=3);
             printf("Respuesta correcta!\n");
             printf("Prueba superada !!\nHas obtenido la letra I\n");
-                
-                
-        }  else if (opcion == 'b'){
-            printf ("ver el historial\n");
-        }
-        else if (opcion == 'c'){
-            printf ("ranking \n");
-        }
-        else{
-            printf ("error\n");
-        }
- //ahora el juego de piedra papel tijero el cual es llamado medinate una funcion
+            //ahora el juego de piedra papel tijero el cual es llamado medinate una funcion
         	do{
 	printf ("jugador elige: piedra(I), tijera (T) y papel (P) (meter mayusculas)\n");
 	gets(op1);
@@ -430,9 +419,19 @@ switch(inicio){
 	while(strcmp(limpieza,Posibilidad)!=0);
 
         
+                
+                
+        }  else if (opcion == 'b'){
+            printf ("ver el historial\n");
+        }
+        else if (opcion == 'c'){
+            printf ("ranking \n");
+        }
+        else{
+            printf ("error\n");
+        }
+ 
     }
-
-
 
 void historia(){
     printf("Era un dia soleado. Las oficinas abrían pronto y Daniel, el conserje, se disponía a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraño olor y observa una luz encendida que creía recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");   
