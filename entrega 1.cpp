@@ -1,5 +1,6 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <string.h>
+#define N 1
 
 struct lista{
     char nombre[100];
@@ -7,15 +8,44 @@ struct lista{
     int registro;
 };
 
-void historia(void);
+void historia(void);  //funcion para introducir al usuario en la historia
+int piedrapapeltijera(char c1[], char c2[]){ //funcion piedra papel tijera
+	int i;
+	for (i=0;i<1;i++){
+
+	 if (c1[i] == 'I' && c2[i] == 'T'){
+		printf ("ganas el otro jugador elijio tijera\n");
+		printf("la letra obtenida es A\n");
+	}
+
+	else if (c1[i] == 'P' && c2[i] == 'T'){
+		printf (" pierdo el otro jugador elijio tijera\n");
+
+	}
+	else if (c1[i] == 'T' && c2[i] == 'T'){
+		printf ("empate\n");
+
+	}
+
+	else {
+		printf ("has metido mal la letra\n");
+	}
+}
+}
+
+int textoUltiPreg(){  //funcion ultima pregunta
+		printf("Durante la huida del lugar del asesinato, se han atravesado diversas\n");
+printf("pruebas con las cuales se han ido obteniendo letras:i,z,p,l,i,m,a,e; a partir de estas consiga averiguar la palabra\n");
+		printf("Introduce la palabra que crees que es:\n");
+}
 
 int main (){
     FILE * fichero;
     struct lista usuarios[500];
     int inicio,numeroUsuarios=0,opcion, cont, numeracion=0, i=0, j=0, a, b, n=0;
     int respuesta2 = 0,respuesta3 = 0,respuesta4 = 0,respuesta5 = 0;
-    char respUno[10] = "carbono",respDos[10] = "rocinante",respTres[10] = "venecia",solucion[10] = "sol",solucion2[30] = "a hierro muere",solucion3[30] = "otorga",solucion4[30] = "codigo",solucion5[30] = "sodio",solucion6[30] = "datil";
-    char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2, respuesta6, respuesta7, respuesta8;
+    char respUno[10] = "carbono",respDos[10] = "rocinante",respTres[10] = "venecia",solucion[10] = "sol",solucion2[30] = "a hierro muere",solucion3[30] = "otorga",solucion4[30] = "codigo",solucion5[30] = "sodio",solucion6[30] = "datil",limpieza[20]={'l','i','m','p','i','e','z','a'},op1[N], op2[N]={'T'},Posibilidad[20];
+    char preguntauno, preguntados, preguntatres,respuesta, frase1, frase2, respuesta6, respuesta7, respuesta8,o1, o2, o3;
     int pregUno, pregDos, pregTres, pregCuatro;
     
 fichero=fopen("usuarios.txt","r");
@@ -347,15 +377,63 @@ switch(inicio){
         else{
             printf ("error\n");
         }
+ //ahora el juego de piedra papel tijero el cual es llamado medinate una funcion
+        	do{
+	printf ("jugador elige: piedra(I), tijera (T) y papel (P) (meter mayusculas)\n");
+	gets(op1);
+
+	printf ("%d",piedrapapeltijera(op1,op2));
+
+	}while (op1[0]!='I');
+//verdadero o falso
+	printf("America fue descubierta en 1492 verdad(V)  o falso(F)\n"); 
+	scanf("%c",&o1);
+	if (o1 == 'V'){
+		printf("has ganado la letra obtenida es E\n");
+	}
+	else if (o1 == 'F'){
+		printf("no has acertado\n");
+			fflush (stdin);
+		printf("la nueva pregunta es si el mar es azulresponde con V o F\n");
+		scanf("%c", &o2);
+		if(o2 == 'V'){
+			printf("has acertado la letra es la E\n");
+		}
+		else if (o2 == 'F'){
+			printf("no has acertado\n");
+				fflush (stdin);
+			printf("la nueva pregunta es si 2+2=4 responde con V o F\n");
+			scanf("%c", &o3);
+			if (o3 == 'V'){
+				printf("la respuesta es correcta la letra obtenida es la E\n");
+			}
+			else if(o3 == 'F'){
+				printf("no has acertado pero la letra es la E\n");
+			}
+			else{
+				printf("error\n");
+			}
+		}
+		else{
+			printf("error\n");
+		}
+	}
+		else{
+			printf("error\n");
+		}
+//ejercicio final, averiguar palabra llamado mediante funcion
+	do{
+	
+		printf("%d",textoUltiPreg());
+		gets(Posibilidad);
+	}
+	while(strcmp(limpieza,Posibilidad)!=0);
+
         
     }
 
 
 
 void historia(){
-    
-    printf("Era un dia soleado. Las oficinas abrían pronto y Daniel, el conserje, se disponía a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraño olor y observa una luz encendida que creía recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");
-    
-    
+    printf("Era un dia soleado. Las oficinas abrían pronto y Daniel, el conserje, se disponía a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraño olor y observa una luz encendida que creía recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");   
 }
-
