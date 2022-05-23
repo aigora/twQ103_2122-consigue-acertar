@@ -117,8 +117,9 @@ switch(inicio){
         printf ("c- ver ranking de jugadores\n");
         scanf ("%d", &opcion);
         
-        if (opcion == 'a'){
-            printf ("EMPEZAMOS\n");
+        if (opcion == 'a') {
+        	
+        	printf ("EMPEZAMOS\n");
             printf(" --------------------  ");
             printf("       ¡TRIVIAL!       ");
             printf(" --------------------\n");
@@ -268,26 +269,29 @@ switch(inicio){
             printf("   ¡SOPA DE LETRAS!    ");
             printf(" --------------------\n");
             
-            do {
-                printf(" F  T  D  R  A  O  E  ");
-                printf(" H  S  I  A  S  M  L  ");
-                printf(" O  G  I  D  O  C  E  ");
-                printf(" D  T  E  R  D  P  S  ");
-                printf(" E  A  R  I  I  O  R  ");
-                printf(" T  U  P  V  O  D  F  ");
-                printf(" D  A  T  I  L  F  C  ");
+            
+            printf(" F  T  D  R  A  O  E  ");
+            printf(" H  S  I  A  S  M  L  ");
+            printf(" O  G  I  D  O  C  E  ");
+            printf(" D  T  E  R  D  P  S  ");
+            printf(" E  A  R  I  I  O  R  ");
+            printf(" T  U  P  V  O  D  F  ");
+            printf(" D  A  T  I  L  F  C\n");
                 
-                printf(" ----PISTAS----\n");
-                printf("La primera palabra es relativo a la informatica\n");
+            printf(" ----PISTAS----\n");
+            
+            do {
+				printf("La primera palabra es relativo a la informatica\n");
                 scanf("%s", &respuesta6);
                 cont=0;
                 if (strcmp (solucion4,&respuesta6) != 0 ) {
                     cont=1;
                 } else {
                     cont=0;
-                    }
-                } while (cont==1);
+                    } 
+				} while (cont==1);
                 
+            do {
                 printf("Siguinete pista:\n La siguiente palabra es un elemento de la tabla periodica\n");
                 scanf("%s",&respuesta7);
                 cont=0;
@@ -295,53 +299,54 @@ switch(inicio){
                     cont=1;
                 } else {
                     cont=0;
-                    }
-                } while (cont==1);
+                    } 
+				} while (cont==1);
     
-                printf("Ultima pista\n La ultima palabra es una fruta exotica\n");
+            do {
+				printf("Ultima pista\n La ultima palabra es una fruta exotica\n");
                 scanf("%s",&respuesta8);
                 cont=0;
-                if (strcmp (solucion6,&respuesta8) = 1) {
+                if (strcmp (solucion6,&respuesta8) != 0) {
                     cont=1;
                 } else {
                     cont=0;
-                    }
-                } while (cont==1);
+                    } 
+				} while (cont==1);
 
-                printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
-                
-                 printf(" --------------------  ");
-                 printf("     ¿CUANTO SABES?    ");
-                 printf(" --------------------\n");
-                printf("A continuacion se mostraran una serie de preguntas. Se debe escoger la opcion que se crea correcta. Solo hay una opcion correcta para cada pregunta.");
-
-                do{
-                printf("Pregunta1:\nDada la siguiente ecuacion, escoja la solucion correcta:\nf(x)=x^3+x^2+x^1+x^0, siendo x=2.\n1)13\n2)14\n3)15\n4)16\n");
-                scanf("%d",&pregUno);
-                }while(pregUno!=3);
-                printf("Respuesta correcta!");
-
-                do{
-                printf("Pregunta2:\n¿Que estrella de Hollywood pantento, en la Segunda Guerra Mundial, un sistema para que no se detectaran los torpedos?\n1)Lauren Bacall\n2)Hedy Lamarr\n3)Joan Blondell\n4)Bette Davis\n");
-                scanf("%d",&pregDos);
-                }while(pregDos!=2);
-                printf("Respuesta correcta!");
-
-                do{
-                printf("Pregunta3:\nUna tarjeta SD es un dispositivo de:\n1)Compresion de video\n2)Memoria\n3)Procesamiento de audio\n4)Comunicacion remota\n");
-                scanf("%d",&pregTres);
-                }while(pregTres!=2);
-                printf("Respuesta correcta!");
-
-                do{
-                printf("Pregunta4:\n¿Cuantos astronautas han tenido el privilegio de andar sobre la luna?\n1)6\n2)3\n3)12\n4)20\n");
-                scanf("%d",&pregCuatro);
-                }while(pregCuatro!=3);
-                printf("Respuesta correcta!\n");
-                printf("Prueba superada !!\nHas obtenido la letra I\n");
+            printf("ENHORABUENA HAS ADIVINADO LAS 3 PALABRAS\n La letra que has conseguido es la M\n");
             
-        
-        } else if (opcion == 'b'){
+            printf(" --------------------  ");
+            printf("     ¿CUANTO SABES?    ");
+            printf(" --------------------\n");
+            printf("A continuacion se mostraran una serie de preguntas. Se debe escoger la opcion que se crea correcta. Solo hay una opcion correcta para cada pregunta.");
+
+            do{
+            printf("Pregunta1:\nDada la siguiente ecuacion, escoja la solucion correcta:\nf(x)=x^3+x^2+x^1+x^0, siendo x=2.\n1)13\n2)14\n3)15\n4)16\n");
+            scanf("%d",&pregUno);
+            }while(pregUno!=3);
+            printf("Respuesta correcta!");
+
+            do{
+            printf("Pregunta2:\n¿Que estrella de Hollywood pantento, en la Segunda Guerra Mundial, un sistema para que no se detectaran los torpedos?\n1)Lauren Bacall\n2)Hedy Lamarr\n3)Joan Blondell\n4)Bette Davis\n");
+            scanf("%d",&pregDos);
+            }while(pregDos!=2);
+            printf("Respuesta correcta!");
+
+            do{
+            printf("Pregunta3:\nUna tarjeta SD es un dispositivo de:\n1)Compresion de video\n2)Memoria\n3)Procesamiento de audio\n4)Comunicacion remota\n");
+            scanf("%d",&pregTres);
+            }while(pregTres!=2);
+            printf("Respuesta correcta!");
+
+            do{
+            printf("Pregunta4:\n¿Cuantos astronautas han tenido el privilegio de andar sobre la luna?\n1)6\n2)3\n3)12\n4)20\n");
+            scanf("%d",&pregCuatro);
+            }while(pregCuatro!=3);
+            printf("Respuesta correcta!\n");
+            printf("Prueba superada !!\nHas obtenido la letra I\n");
+                
+                
+		}  else if (opcion == 'b'){
             printf ("ver el historial\n");
         }
         else if (opcion == 'c'){
@@ -350,6 +355,5 @@ switch(inicio){
         else{
             printf ("error\n");
         }
-    
-}
-
+        
+    }
