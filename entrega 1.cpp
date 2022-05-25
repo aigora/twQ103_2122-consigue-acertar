@@ -81,9 +81,9 @@ switch(inicio){
         fflush(stdin);
         gets(usuarios[i].contrasennya);
         
-  //una vez introducidos nombre y contraseña vamos a comprobar que no exista en el fichero. En caso de ya existir, se pedirá de nuevo, de lo contrario, se añadirá al fichero
+  //una vez introducidos nombre y contraseÃ±a vamos a comprobar que no exista en el fichero. En caso de ya existir, se pedirÃ¡ de nuevo, de lo contrario, se aÃ±adirÃ¡ al fichero
         
-        for(a=0;a<numeroUsuarios;a++){ //la variable numeroUsuarios irá incrementando según se vayan nuevos usuarios
+        for(a=0;a<numeroUsuarios;a++){ //la variable numeroUsuarios irÃ¡ incrementando segÃºn se vayan nuevos usuarios
             
             for(j=0;j<i;j++){
                 if(strcmp(usuarios[i].nombre,usuarios[j].nombre)==0){
@@ -109,7 +109,7 @@ switch(inicio){
         
     case 2: //Usuario previamente registrado
     
-        do{ //se confirma que el nombre y contraseña introducidos coinciden con alguno ya existente en el fichero
+        do{ //se confirma que el nombre y contraseÃ±a introducidos coinciden con alguno ya existente en el fichero
             printf("Nombre de usuario:\t");
             fflush(stdin);
             gets(usuarios[i].nombre);
@@ -193,7 +193,7 @@ switch(inicio){
              printf(" --------------------\n");
             do
             {
-                printf("¿Qué entra en el río y no se moja?\n");
+                printf("¿Que entra en el rÃ­o y no se moja?\n");
                 scanf("%s",&respuesta);
                 cont=0;
                 if(strcmp(solucion,&respuesta) != 0){
@@ -208,7 +208,7 @@ switch(inicio){
     
     
             printf (" ---------------------------");
-            printf ("     ¡ADIVINA EL REFRAN!    ");
+            printf ("     Â¡ADIVINA EL REFRAN!    ");
             printf (" ---------------------------");
             do {
                 printf ("El que a hierro mata...\n");
@@ -243,7 +243,7 @@ switch(inicio){
     
             do {
                 printf(" Primer numero\n");
-                printf(" Es la posición del Berilio en la tabla periódica");
+                printf(" Es la posicion del Berilio en la tabla periodica");
                 scanf("%d", &respuesta2);
                 if (respuesta2 == 6) {
                     cont=1;
@@ -288,7 +288,7 @@ switch(inicio){
             
                 
             printf(" --------------------  ");
-            printf("   ¡SOPA DE LETRAS!    ");
+            printf("   Â¡SOPA DE LETRAS!    ");
             printf(" --------------------\n");
             
             
@@ -366,33 +366,37 @@ switch(inicio){
             }while(pregCuatro!=3);
             printf("Respuesta correcta!\n");
             printf("Prueba superada !!\nHas obtenido la letra I\n");
-            //ahora el juego de piedra papel tijero el cual es llamado medinate una funcion
+            //ahora el juego de piedra papel tijero el cual es llamado medinate una funcion                   
+            printf(" --------------------  ");
+            printf(" ¡piedra papel o tijera! ");
+            printf(" --------------------\n");
             do{
-    printf ("jugador elige: piedra(I), tijera (T) y papel (P) (meter mayusculas)\n");
-    gets(op1);
-
-    printf ("%d",piedrapapeltijera(op1,op2));
-
-    }while (op1[0]!='I');
-//verdadero o falso
-    printf("America fue descubierta en 1492 verdad(V)  o falso(F)\n");
-    scanf("%c",&o1);
-    if (o1 == 'V'){
-        printf("has ganado la letra obtenida es E\n");
-    }
-    else if (o1 == 'F'){
-        printf("no has acertado\n");
-            fflush (stdin);
-        printf("la nueva pregunta es si el mar es azulresponde con V o F\n");
-        scanf("%c", &o2);
-        if(o2 == 'V'){
-            printf("has acertado la letra es la E\n");
-        }
-        else if (o2 == 'F'){
-            printf("no has acertado\n");
+ 			   printf ("jugador elige: piedra(I), tijera (T) y papel (P) (meter mayusculas)\n");
+    		   gets(op1);
+			   printf ("%d",piedrapapeltijera(op1,op2));
+			}while (op1[0]!='I');
+			//verdadero o falso
+            printf(" --------------------  ");
+            printf("   ¡verdadero o falso!  ");
+            printf(" --------------------\n");
+			 printf("America fue descubierta en 1492 verdad(V)  o falso(F)\n");
+    		scanf("%c",&o1);
+   			 if (o1 == 'V'){
+        		printf("has ganado la letra obtenida es E\n");
+    		}
+    		else if (o1 == 'F'){
+        		printf("no has acertado\n");
+            	fflush (stdin);
+        		printf("la nueva pregunta es si el mar es azulresponde con V o F\n");
+        		scanf("%c", &o2);
+        	if(o2 == 'V'){
+            	printf("Enhorabuena, has acertado la letra es la E\n");
+        	}
+        	else if (o2 == 'F'){
+            	printf("no has acertado\n");
                 fflush (stdin);
-            printf("la nueva pregunta es si 2+2=4 responde con V o F\n");
-            scanf("%c", &o3);
+            	printf("la nueva pregunta es si 2+2=4 responde con V o F\n");
+            	scanf("%c", &o3);
             if (o3 == 'V'){
                 printf("la respuesta es correcta la letra obtenida es la E\n");
             }
@@ -402,32 +406,26 @@ switch(inicio){
             else{
                 printf("error\n");
             }
-        }
-        else{
-            printf("error\n");
-        }
-    }
-        else{
-            printf("error\n");
-        }
-//ejercicio final, averiguar palabra llamado mediante funcion
-    do{
-    
-        printf("%d",textoUltiPreg());
-        gets(Posibilidad);
-    }
-    while(strcmp(limpieza,Posibilidad)!=0);
-
-        
-                
-                
-        }  
-        else{
-            printf ("error\n");
-        }
- 
-    }
+        	}
+        	else{
+            	printf("error\n");
+        	}
+    		}
+        	else{
+            	printf("error\n");
+        	}
+			//ejercicio final, averiguar palabra llamado mediante funcion
+   			 do{
+    			 printf("%d",textoUltiPreg());
+      			  gets(Posibilidad);
+   			 }
+   			 while(strcmp(limpieza,Posibilidad)!=0);         
+       		 }  
+        	else{
+        	    printf ("error\n");
+        	} 
+   			}
 
 void historia(){
-    printf("Era un dia soleado. Las oficinas abrían pronto y Daniel, el conserje, se disponía a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraño olor y observa una luz encendida que creía recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");
+    printf("Era un dia soleado. Las oficinas abrÃ­an pronto y Daniel, el conserje, se disponÃ­a a poner todo en orden. Enciende el aire, las luces, prepara los despachos...\nPercibe un extraÃ±o olor y observa una luz encendida que creÃ­a recordar haber apagado el dia anterior.Se acerca y para su sorpresa encuentra al jefe desvanecido sobre su escritorio.\nLlama a la policia y comienza la investigacion.\n\n");
 }
